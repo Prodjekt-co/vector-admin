@@ -1,10 +1,20 @@
 # Builder
 FROM node:lts AS builder
-LABEL org.opencontainers.image.url=https://github.com/Prodjekt-co/vector-admin org.opencontainers.image.source=https://github.com/Prodjekt-co/vector-admin
+LABEL org.opencontainers.image.url="https://github.com/Prodjekt-co/vector-admin"
+LABEL org.opencontainers.image.description="Vector Admin UI"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
 # Base path for synapse admin
 ARG BASE_PATH=./
 
+# Add a non-root user
+RUN groupadd -r appuser && useradd -r -g appuser -s /sbin/nologin appuser
+
+# Set working directory ownership
 WORKDIR /src
+RUN chown -R appuser:appuser /src
+
+# Switch to non-root user
+USER appuser
 
 # Copy .yarn directory to the working directory (must be on a separate line!)
 # Use https://docs.docker.com/engine/reference/builder/#copy---parents when available
