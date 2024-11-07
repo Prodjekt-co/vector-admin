@@ -7,14 +7,14 @@ LABEL org.opencontainers.image.licenses="Apache-2.0"
 ARG BASE_PATH=./
 
 # Add a non-root user
-RUN groupadd -r appuser && useradd -r -g appuser -s /sbin/nologin appuser
+## RUN groupadd -r appuser && useradd -r -g appuser -s /sbin/nologin appuser
 
 # Set working directory ownership
 WORKDIR /src
-RUN chown -R appuser:appuser /src
+## RUN chown -R appuser:appuser /src
 
 # Switch to non-root user
-USER appuser
+## USER appuser
 
 # Copy .yarn directory to the working directory (must be on a separate line!)
 # Use https://docs.docker.com/engine/reference/builder/#copy---parents when available
