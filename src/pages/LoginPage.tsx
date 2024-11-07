@@ -1,24 +1,25 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-import LockIcon from "@mui/icons-material/Lock";
 import { Avatar, Box, Button, Card, CardActions, CircularProgress, MenuItem, Select, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import {
   Form,
   FormDataConsumer,
   Notification,
-  required,
-  useLogin,
-  useNotify,
-  useLocaleState,
-  useTranslate,
   PasswordInput,
+  required,
   TextInput,
   useLocales,
+  useLocaleState,
+  useLogin,
+  useNotify,
+  useTranslate,
 } from "react-admin";
 import { useFormContext } from "react-hook-form";
 
 import { useAppContext } from "../AppContext";
+import VectorLogo from "../components/VectorLogo";
+import storage from "../storage";
 import {
   getServerVersion,
   getSupportedFeatures,
@@ -27,7 +28,6 @@ import {
   isValidBaseUrl,
   splitMxid,
 } from "../synapse/synapse";
-import storage from "../storage";
 
 const FormBox = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -35,7 +35,7 @@ const FormBox = styled(Box)(({ theme }) => ({
   minHeight: "calc(100vh - 1rem)",
   alignItems: "center",
   justifyContent: "flex-start",
-  background: "url(./images/floating-cogs.svg)",
+  background: "url(./images/vector_desktop2-min.jpg)",
   backgroundColor: "#f9f9f9",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -51,7 +51,7 @@ const FormBox = styled(Box)(({ theme }) => ({
     justifyContent: "center",
   },
   [`& .icon`]: {
-    backgroundColor: theme.palette.grey[500],
+    backgroundColor: theme.palette.grey[800],
   },
   [`& .hint`]: {
     marginTop: "1em",
@@ -268,11 +268,11 @@ const LoginPage = () => {
               <CircularProgress size={25} thickness={2} />
             ) : (
               <Avatar className="icon">
-                <LockIcon />
+                <VectorLogo />
               </Avatar>
             )}
           </Box>
-          <Box className="hint">{translate("synapseadmin.auth.welcome")}</Box>
+          <Box className="hint">{translate("Welcome to Vector Admin")}</Box>
           <Box className="form">
             <Select
               value={locale}
