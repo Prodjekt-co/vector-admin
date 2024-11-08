@@ -45,6 +45,22 @@ const i18nProvider = polyglotI18nProvider(
   ]
 );
 
+const darkTheme = {
+  palette: {
+    mode: 'dark',
+    background: {
+      default: '#303030',
+      paper: '#424242',
+    },
+    primary: {
+      main: '#F99093FF',
+    },
+    secondary: {
+      main: '#CFF48FFF',
+    },
+  },
+};
+
 const App = () => (
   <Admin
     disableTelemetry
@@ -54,6 +70,7 @@ const App = () => (
     dataProvider={dataProvider}
     i18nProvider={i18nProvider}
     darkTheme={{ palette: { mode: "dark" } }}
+    theme={darkTheme}       // Changed this line
   >
     <CustomRoutes>
       <Route path="/import_users" element={<ImportFeature />} />

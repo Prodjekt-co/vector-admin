@@ -38,6 +38,7 @@ const FormBox = styled(Box)(({ theme }) => ({
   background: "url(./images/vector_desktop2-min.jpg)",
   backgroundColor: "#f9f9f9",
   backgroundRepeat: "no-repeat",
+  backgroundPosition: "center center", // Centers the background
   backgroundSize: "cover",
 
   [`& .card`]: {
@@ -81,6 +82,29 @@ const FormBox = styled(Box)(({ theme }) => ({
     marginBottom: "1rem",
     marginLeft: "0.5rem",
   },
+  [`& .avatar`]: {
+    margin: "2rem",
+    display: "flex",
+    justifyContent: "center",
+    '& .MuiAvatar-root': {
+      width: '120px',
+      height: '120px',
+      backgroundColor: 'transparent',
+      borderRadius: '0',  // This removes the circular shape if needed
+    },
+    '& .MuiBox-root': {  // This targets the Box container
+      width: '120px !important',  // Forces width override
+      height: '120px !important', // Forces height override
+      minHeight: '120px !important',
+      minWidth: '120px !important',
+    }
+  },
+  [`& .css-1yus0b2`]: {  // Direct override of the problematic class
+    width: '120px !important',
+    height: '120px !important',
+    minHeight: '120px !important',
+    minWidth: '120px !important',
+  }
 }));
 
 const LoginPage = () => {
