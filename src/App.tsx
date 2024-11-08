@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import { ImportFeature } from "./components/ImportFeature";
 import germanMessages from "./i18n/de";
 import englishMessages from "./i18n/en";
+import spanishMessages from "./i18n/es";
 import frenchMessages from "./i18n/fr";
 import italianMessages from "./i18n/it";
 import russianMessages from "./i18n/ru";
@@ -30,6 +31,7 @@ const messages = {
   it: italianMessages,
   ru: russianMessages,
   zh: chineseMessages,
+  es: spanishMessages,  // Add Spanish
 };
 const i18nProvider = polyglotI18nProvider(
   locale => (messages[locale] ? merge({}, messages.en, messages[locale]) : messages.en),
@@ -42,6 +44,7 @@ const i18nProvider = polyglotI18nProvider(
     { locale: "fa", name: "Persian(فارسی)" },
     { locale: "ru", name: "Russian(Русский)" },
     { locale: "zh", name: "简体中文" },
+    { locale: "es", name: "Español" },  // Add Spanish
   ]
 );
 

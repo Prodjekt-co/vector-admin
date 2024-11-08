@@ -6716,6 +6716,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ra-language-spanish@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "ra-language-spanish@npm:1.0.0"
+  checksum: 10c0/e2ede9dcb8cc2f7be6c88f31bcbac6fb3082db97728cdcd9a76d3a4405a55cfe9bcbd758ac9b7cb91ffbe86acf8aede0174c48d50616eb71e9d74539f6eb1373
+  languageName: node
+  linkType: hard
+
 "ra-ui-materialui@npm:^4.16.20":
   version: 4.16.20
   resolution: "ra-ui-materialui@npm:4.16.20"
@@ -7676,6 +7683,7 @@ __metadata:
     ra-language-french: "npm:^4.16.20"
     ra-language-italian: "npm:^3.13.1"
     ra-language-russian: "npm:^4.14.2"
+    ra-language-spanish: "npm:^1.0.0"
     react: "npm:^18.3.1"
     react-admin: "npm:^4.16.20"
     react-dom: "npm:^18.3.1"

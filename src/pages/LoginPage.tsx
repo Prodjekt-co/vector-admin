@@ -31,7 +31,7 @@ import {
 
 const FormBox = styled(Box)(({ theme }) => ({
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "column",``
   minHeight: "calc(100vh - 1rem)",
   alignItems: "center",
   justifyContent: "flex-start",
