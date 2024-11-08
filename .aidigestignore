@@ -1,0 +1,3 @@
+test/test-ignore.ts
+/node_modules
+dist
