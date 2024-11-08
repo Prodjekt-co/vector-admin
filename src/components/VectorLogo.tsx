@@ -23,3 +23,4 @@ const VectorLogo = () => (
 );
 
 export default VectorLogo;
+``
