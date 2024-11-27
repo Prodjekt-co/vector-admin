@@ -16,6 +16,7 @@ services:
     #    to define a maximum ram for node. otherwise the build will fail.
     #    - NODE_OPTIONS="--max_old_space_size=1024"
     #    - BASE_PATH="/synapse-admin"
+
     ports:
-      - "8080:80"
+      - "8081:80"
     restart: unless-stopped
